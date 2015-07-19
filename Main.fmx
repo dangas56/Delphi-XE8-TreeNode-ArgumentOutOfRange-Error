@@ -1,0 +1,44 @@
+object frmMain: TfrmMain
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 141
+  ClientWidth = 213
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object pnl1: TPanel
+    Align = Top
+    Size.Width = 213.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object btn1: TButton
+      Position.X = 8.000000000000000000
+      Position.Y = 8.000000000000000000
+      TabOrder = 0
+      Text = 'Basic Fill'
+      OnClick = btn1Click
+    end
+  end
+  object scrlbx1: TScrollBox
+    Align = Client
+    Size.Width = 213.000000000000000000
+    Size.Height = 100.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 213.000000000000000000
+    Viewport.Height = 100.000000000000000000
+    object tv1: TTreeView
+      Align = Client
+      Size.Width = 213.000000000000000000
+      Size.Height = 100.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Viewport.Width = 209.000000000000000000
+      Viewport.Height = 96.000000000000000000
+    end
+  end
+end
