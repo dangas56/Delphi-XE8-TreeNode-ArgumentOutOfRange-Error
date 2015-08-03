@@ -18,9 +18,19 @@ object frmMain: TfrmMain
     object btn1: TButton
       Position.X = 8.000000000000000000
       Position.Y = 8.000000000000000000
-      TabOrder = 0
+      TabOrder = 1
       Text = 'Basic Fill'
       OnClick = btn1Click
+    end
+    object btn2: TButton
+      Position.X = 96.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 89.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Fill Select Fill'
+      OnClick = btn2Click
     end
   end
   object scrlbx1: TScrollBox

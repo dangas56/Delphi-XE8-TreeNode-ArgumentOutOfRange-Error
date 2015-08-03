@@ -14,8 +14,10 @@ type
     pnl1: TPanel;
     btn1: TButton;
     scrlbx1: TScrollBox;
+    btn2: TButton;
     procedure btn1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -32,7 +34,9 @@ implementation
 procedure TfrmMain.btn1Click(Sender: TObject);
 var i : Integer;
 begin
+  tv1.BeginUpdate;
   tv1.Clear;
+  tv1.EndUpdate;
   tv1.BeginUpdate;
   try
     for I := 0 to 10 do begin
@@ -46,6 +50,19 @@ begin
   end;
 end;
 
+
+procedure TfrmMain.btn2Click(Sender: TObject);
+var i : Integer;
+begin
+  tv1.Clear;
+  for I := 0 to 10 do begin
+    with TTreeViewItem.Create( tv1 ) do begin
+      Parent := tv1;
+      Text := inttostr(i);
+    end;
+  end;
+  tv1.Selected := tv1.Items[ tv1.Count-1 ];
+end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
